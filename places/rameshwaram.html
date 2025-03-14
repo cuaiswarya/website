@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destination</title>
+    <link rel="stylesheet" href="../assets/css/page.css"> <!-- Link to the new CSS file -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <section class="container">
+        <div class="text-section">
+            <h1>RAMESHWARAM</h1>
+            <h3>TAMIL NADU | INDIA</h3>
+        </div>
+        <div class="image-section">
+            <img src="https://tanhadil.in/wp-content/uploads/2021/05/Pamban-Bridge.jpg" alt="Rameshwaram" class="active">
+            <img src="https://www.tamilnadutourism.tn.gov.in/img/pages/medium-desktop/rameswaram-temple-1656167436_f2c551193bb7d4bc6f70.webp" alt="Rameshwaram">
+
+            <div class="image-nav">
+                <button onclick="prevImage()">&larr;</button>
+                <span id="image-counter">1/2</span>
+                <button onclick="nextImage()">&rarr;</button>
+            </div>
+        </div>
+    </section>
+    <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="highlight-item">
+            <span class="highlight-number">01</span>
+            <p>Pilgrimage visit</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">02</span>
+            <p>Visit Kalam National Memorial</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">03</span>
+            <p>Panchamukhi Hanuman aka (Five-Faced Hanuman Temple)</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">04</span>
+            <p>Explore Pamban Bridge</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">05</span>
+            <p>Visit Dr. A.P.J. Abdul Kalam Memorial</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2022 wego connect. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+    <script src="../assets/js/scrollreveal.min.js"></script>
+        
+    <!--=============== SWIPER JS ===============-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-section img');
+        const imageCounter = document.getElementById('image-counter');
+        
+        function updateImage() {
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentImageIndex);
+            });
+            imageCounter.textContent = `${currentImageIndex + 1}/${images.length}`;
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            updateImage();
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            updateImage();
+        }
+    </script>
+</body>
+</html>
+
+                   
+
+                        
+          
+                      

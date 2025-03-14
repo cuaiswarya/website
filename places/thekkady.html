@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destination</title>
+    <link rel="stylesheet" href="../assets/css/page.css"> <!-- Link to the new CSS file -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <section class="container">
+        <div class="text-section">
+            <h1>THEKKADY</h1>
+            <h3>KERALA | INDIA</h3>
+        </div>
+        <div class="image-section">
+            <img src="https://thekkady.link/wp-content/uploads/2022/04/jeep-safari-in-kerala-banner.jpg" alt="Thekkady" class="active">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/347988183.jpg?k=a882330dac27a3f0c7d5995e9249f5df8c3c785d571341764937adb5e2df01a7&o=&hp=1" alt="Thekkady">
+            <img src="https://www.tourindiawithdriver.com/UPLOAD/1708_Thekkady-Periyar-Tiger-Trail.jpg" alt="Thekkady">
+            <img src="https://www.inboundtrip.com/blog/wp-content/uploads/2018/01/thekkady.jpg" alt="Thekkady">
+            <div class="image-nav">
+                <button onclick="prevImage()">&larr;</button>
+                <span id="image-counter">1/4</span>
+                <button onclick="nextImage()">&rarr;</button>
+            </div>
+        </div>
+    </section>
+    <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="highlight-item">
+            <span class="highlight-number">01</span>
+            <p>Thekkady Wildlife Sanctuary</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">02</span>
+            <p>Thekkady Spice Garden</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">03</span>
+            <p>Kathakali Show</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">04</span>
+            <p>Kalaripayattu Show</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">05</span>
+            <p>Thekkady Elephant Ride</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">06</span>
+            <p>Jungle Jeep Safari</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">07</span>
+            <p>Thekkady Ayurvedic Body Massage</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2022 wego connect. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+    <script src="../assets/js/scrollreveal.min.js"></script>
+        
+    <!--=============== SWIPER JS ===============-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-section img');
+        const imageCounter = document.getElementById('image-counter');
+        
+        function updateImage() {
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentImageIndex);
+            });
+            imageCounter.textContent = `${currentImageIndex + 1}/${images.length}`;
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            updateImage();
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            updateImage();
+        }
+    </script>
+</body>
+</html>
+
+   
