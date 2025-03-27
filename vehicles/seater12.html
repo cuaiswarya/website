@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Seater - Mid Van</title>
+    <link rel="stylesheet" href="../assets/css/page.css"> <!-- Link to the CSS file -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="text-section">
+            <h1>12 Seater - Midsize Traveller</h1>
+            <h3>Spacious | Comfortable | Perfect for Group Travel</h3>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/about12.jpg" alt="Mid Van Exterior" class="active">
+            <img src="../assets/img/about12_0.jpg" alt="Mid Van Interior">
+            <div class="image-nav">
+                <button onclick="prevImage()">&larr;</button>
+                <span id="image-counter">1/2</span>
+                <button onclick="nextImage()">&rarr;</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="highlight-item">
+            <span class="highlight-number">01</span>
+            <p>Spacious seating</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">02</span>
+            <p>Comfort, Music, air-conditioning</p>
+        </div>
+        <div class="highlight-item">
+            <span class="highlight-number">03</span>
+            <p>Ideal for Pilgrimage visit, family trips, and tours</p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2022 wego connect. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <script src="../assets/js/scrollreveal.min.js"></script>
+        
+    <!--=============== SWIPER JS ===============-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-section img');
+        const imageCounter = document.getElementById('image-counter');
+        
+        function updateImage() {
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentImageIndex);
+            });
+            imageCounter.textContent = `${currentImageIndex + 1}/${images.length}`;
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            updateImage();
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            updateImage();
+        }
+    </script>
+</body>
+</html>
