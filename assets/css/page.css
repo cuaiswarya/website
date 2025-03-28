@@ -133,3 +133,25 @@ h3 {
         margin-bottom: 5px;
     }
 }
+.whatsapp {
+    position: fixed;
+    bottom: 20px;   /* Distance from the bottom */
+    right: 20px;    /* Distance from the right */
+    background-color: #25d366; /* WhatsApp Green Color */
+    border-radius: 50%; /* Circular button */
+    padding: 10px;
+    z-index: 1000; /* Ensure the button appears above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover effect */
+.whatsapp:hover {
+    transform: scale(1.1); /* Slightly grow the icon when hovered */
+}
+
+/* Optional: Adjust the size of the WhatsApp icon */
+.whatsapp svg {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+}
