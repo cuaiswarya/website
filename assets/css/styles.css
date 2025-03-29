@@ -1058,8 +1058,8 @@ input {
 }
 @media (max-width: 768px) {
   .whatsapp {
-    width: 60px; /* Increase width */
-    height: 60px; /* Increase height */
-    bottom: 60px; /* Adjust position if needed */
+    width: 80px; /* Increase width */
+    height: 80px; /* Increase height */
+    bottom: 80px; /* Adjust position if needed */
   }
 }
