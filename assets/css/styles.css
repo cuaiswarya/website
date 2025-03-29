@@ -1043,7 +1043,7 @@ input {
 /*whatsapp*/
 .whatsapp {
   position: fixed;
-  left: 20px;
+  right: 20px;
   bottom: 100px;
   background-color: #25D366;
   color: white;
