@@ -636,6 +636,13 @@ input {
 
 
 /*=============== FOOTER ===============*/
+.styled-hr {
+  border: none; /* Remove default styling */
+  height: 2px; /* Adjust thickness */
+  background: linear-gradient(to right, #8f89c7, #4eafdf); /* Gradient color */
+  margin: 20px 0; /* Add spacing (optional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for design */
+}
 
 .footer {
   background-color: #222;
