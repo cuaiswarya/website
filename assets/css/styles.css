@@ -1058,9 +1058,9 @@ input {
 }
 @media (max-width: 768px) {
   .whatsapp {
-    width: 100px; /* Increase width */
-    height: 100px; /* Increase height */
-    bottom: 100px; /* Adjust position if needed */
+    width: 60px; /* Increase width */
+    height: 60px; /* Increase height */
+    bottom: 60px; /* Adjust position if needed */
   }
 }
 
