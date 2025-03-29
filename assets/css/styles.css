@@ -1056,4 +1056,10 @@ input {
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
-
+@media (max-width: 768px) {
+  .whatsapp {
+    width: 60px; /* Increase width */
+    height: 60px; /* Increase height */
+    bottom: 60px; /* Adjust position if needed */
+  }
+}
